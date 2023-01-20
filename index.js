@@ -36,3 +36,10 @@ app.get("/datos/personajes.json",(req,res,next)=>{
     res.json(datos );
 })
 
+app.get("/sprites/campeonesMD/:nombrePj",(req,res,next)=>{
+    let nombrePj = req.params.nombrePj;
+    res.sendFile(__dirname+`/images/campeonesMD/${nombrePj}.jpg`);
+})
+
+
+
