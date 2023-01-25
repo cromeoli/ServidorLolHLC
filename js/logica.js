@@ -77,7 +77,7 @@ function handleForm(event) {
 function seleccionarRol(rolPersonaje){
     Object.entries(personajes).map(psj => {
         if (psj[1].tags[0] === rolPersonaje) {
-            let nombrePersonaje = psj[1].name;
+            let nombrePersonaje = psj[1].id;
             const urlImg = `./sprites/campeonesMD/${nombrePersonaje}_0`;
             crearDiv(urlImg, psj[1]);
         }
@@ -90,7 +90,7 @@ function seleccionarRol(rolPersonaje){
 function seleccionarPersonaje(nombrePersonaje){
     Object.entries(personajes).map(psj => {
         if (psj[1].name === nombrePersonaje) {
-            const urlImg = `./sprites/campeonesMD/${nombrePersonaje}_0`;
+            const urlImg = `./sprites/campeonesMD/${psj[1].id}_0`;
             crearDiv(urlImg, psj[1]);
         }
     });
